@@ -13,7 +13,7 @@ def main(filename, xChar, yChar):
 			for i in range((x-1)*squareX, x*squareX):
 				for j in range((y-1)*squareY, y*squareY):
 					total += image.getpixel((i, j))[0]
-			ttw += charac[round(((total/(squareX*squareY))/255)*10)-1]
+			ttw += charac[round(((total/(squareX*squareY))/255)*len(charac))-1]
 		ttw += '\n'
 	with open(filename.split('.')[0]+'.txt', 'w') as file: file.write(ttw)
 
